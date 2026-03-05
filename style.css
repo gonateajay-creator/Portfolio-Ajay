@@ -123,51 +123,13 @@ box-shadow:0 0 20px #00f5ff}
 
 /* SKILLS HOVER EFFECT */
 
-.skill-card{
-background:#1e293b;
-margin-bottom:20px;
-padding:20px;
-border-radius:10px;
-position:relative;
-overflow:hidden;
-transition:0.4s;
-cursor:pointer;
-}
 
-.skill-card h3{
-color:#00f5ff;
-}
-
-.skill-info{
-opacity:0;
-margin-top:10px;
-color:#cbd5e1;
-transition:0.4s;
-}
-
-.skill-card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px #00f5ff;
-}
 
 .skill-card:hover .skill-info{
 opacity:1;
 }
 
-/* PROJECT */
-/* .project-grid{display:flex;gap:25px;flex-wrap:wrap;justify-content:center}
-.project-card{
-background:#1e293b;padding:25px;border-radius:12px;width:260px;
-transition:.4s;text-align:center}
-.project-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px #00f5ff}
 
-.project-buttons{
-margin-top:15px;
-display:flex;
-justify-content:center;
-} */
 
 /* ================= PROJECT SECTION ================= */
 
@@ -194,9 +156,76 @@ border:1px solid transparent;
 }
 
 /* Hover Animation */
+/* .skill-card{
+background:#1e293b;
+margin-bottom:20px;
+padding:20px;
+border-radius:10px;
+position:relative;
+overflow:hidden;
+transition:0.4s;
+cursor:pointer;
+}
 
+.skill-card h3{
+color:#00f5ff;
+}
+
+.skill-info{
+opacity:0;
+margin-top:10px;
+color:#cbd5e1;
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #00f5ff;
+}
 .project-card:hover{
 transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 25px #00f5ff;
+border:1px solid #00f5ff;
+} */
+
+/* ================= SKILLS ================= */
+
+.skills-grid{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+margin-top:40px;
+}
+
+.skill-card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+width:220px;
+text-align:center;
+transition:0.4s;
+border:1px solid transparent;
+}
+
+.skill-card img{
+width:60px;
+height:60px;
+margin-bottom:15px;
+}
+
+.skill-card h3{
+color:#00f5ff;
+margin-bottom:10px;
+}
+
+.skill-card p{
+font-size:14px;
+color:#cbd5e1;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
 box-shadow:0 0 25px #00f5ff;
 border:1px solid #00f5ff;
 }

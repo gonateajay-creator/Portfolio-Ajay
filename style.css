@@ -94,7 +94,7 @@ nav a:hover {
 position:fixed;
 top:0;
 left:0;
-width:60%;  /* 🔥 adjust here */
+width:55%;  /* 🔥 adjust here */
 height:100vh;
 
 background:rgba(15,23,42,0.7); /* 🔥 transparent */

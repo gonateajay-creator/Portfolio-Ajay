@@ -36,41 +36,33 @@ font-size:32px;
 /* ================= NAVBAR ================= */
 
 /* FORCE HIDE NAV IN MOBILE */
+/* MOBILE SIDEBAR NAV */
 @media(max-width:768px){
 
 #nav-links{
+position:fixed;
+top:0;
+left:0;
+width:50%; /* 🔥 half screen */
+height:100%;
+background:#0f172a;
 display:flex;
 flex-direction:column;
-position:fixed; /* 🔥 important */
-top:70px;
-left:0;
-width:100%;
-height:50vh;
-background:#0f172a;
-text-align:center;
-padding:20px 0;
-transform:translateY(-100%);
+align-items:center;
+justify-content:center;
+transform:translateX(-100%); /* hidden left */
 transition:0.4s ease;
 z-index:1000;
 }
 
-/* hide by default */
-#nav-links{
-opacity:0;
-pointer-events:none;
-}
-
-/* show when active */
+/* active = show */
 #nav-links.active{
-transform:translateY(0);
-opacity:1;
-pointer-events:auto;
+transform:translateX(0);
 }
 
 /* links */
 #nav-links a{
-display:block;
-margin:15px 0;
+margin:20px 0;
 font-size:18px;
 }
 
@@ -81,8 +73,6 @@ font-size:28px;
 cursor:pointer;
 color:white;
 z-index:1100;
-}
-
 }
 
 }

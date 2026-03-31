@@ -278,6 +278,11 @@ toggle.addEventListener("click", () => {
   overlay.classList.toggle("active");
 });
 
+/* close when clicking overlay */
+overlay.addEventListener("click", () => {
+  nav.classList.remove("active");
+  overlay.classList.remove("active");
+});
 </script>
 
 </body>

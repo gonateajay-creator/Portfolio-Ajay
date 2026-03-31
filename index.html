@@ -11,17 +11,21 @@
 <body>
 
 <header class="navbar">
-  <div class="container nav-flex">
-    <h2 class="logo">Ajay<span>Gonate</span></h2>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+ <div class="container nav-flex">
+  <h2 class="logo">Ajay<span>Gonate</span></h2>
+
+  <!-- ADD THIS -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
 </header>
 
 <section id="home" class="hero">
@@ -80,6 +84,32 @@
   </div>
 </section>
 <!-- skill -->
+<!-- <section id="skills" class="section dark">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skill-card">
+      <h3>Manual Testing</h3>
+      <div class="skill-info">
+        <p>SDLC, STLC, Test Case Writing, Bug Reporting</p>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Automation Testing</h3>
+      <div class="skill-info">
+        <p>Selenium WebDriver, TestNG, Cucumber Framework</p>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>SQL</h3>
+      <div class="skill-info">
+        <p>Joins, Subqueries, CRUD Operations</p>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 <section id="skills" class="section dark">
   <div class="container">
@@ -98,6 +128,12 @@
         <h3>Automation Testing</h3>
         <p>Selenium WebDriver, TestNG, Cucumber</p>
       </div>
+
+      <div class="skill-card">
+  <img src="./api.png" alt="API Testing">
+  <h3>API Testing</h3>
+  <p>Postman, REST APIs, Request & Response Validation</p>
+</div>
 
       <div class="skill-card">
         <img src="./sql.png" alt="SQL">
@@ -232,9 +268,13 @@ document.querySelectorAll(".skill-header").forEach(header=>{
     header.parentElement.classList.toggle("active");
   });
 });
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
 </script>
 
 </body>
 </html>
-
-

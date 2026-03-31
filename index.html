@@ -283,6 +283,12 @@ overlay.addEventListener("click", () => {
   nav.classList.remove("active");
   overlay.classList.remove("active");
 });
+ document.querySelectorAll("#nav-links a").forEach(link=>{
+  link.addEventListener("click", ()=>{
+    document.getElementById("nav-links").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+  });
+});
 </script>
 
 </body>

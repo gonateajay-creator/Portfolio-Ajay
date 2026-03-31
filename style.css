@@ -88,26 +88,57 @@ nav a:hover {
   }
 
   /* Sidebar nav styles */
-  #nav-links {
+
+
+#nav-links{
+position:fixed;
+top:0;
+left:0;
+width:60%;  /* 🔥 adjust here */
+height:100vh;
+
+background:rgba(15,23,42,0.7); /* 🔥 transparent */
+backdrop-filter:blur(8px);
+
+display:flex;
+flex-direction:column;
+padding-top:80px;
+
+transform:translateX(-100%);
+transition:0.4s ease;
+z-index:1000;
+}
+
+#nav-links.active{
+transform:translateX(0);
+}
+
+#nav-links a{
+margin:15px 20px;
+font-size:18px;
+}
+
+}
+  /* #nav-links {
     display: flex;
     flex-direction: column;
     position: fixed; /* fixed for overlay effect */
-    top: 70px;
+    /* top: 70px;
     left: 0;
     width: 70%;          /* increased width for better visibility */
-    max-width: 280px;    /* max width for large phones */
-    height: 50vh;
+    /* max-width: 280px;    /* max width for large phones */
+    /* height: 50vh;
     background: #0f172a;
     text-align: left;
     padding: 20px;
     padding-left: 20px;  /* left padding so text not flush */
-    transform: translateX(-110%); /* hide left by default */
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    /* transform: translateX(-110%); /* hide left by default */
+    /* transition: transform 0.4s ease, opacity 0.4s ease;
     opacity: 0;
     pointer-events: none;
     z-index: 1000;
-    align-items: flex-start; /* left align links */
-  }
+    align-items: flex-start; /* left align links */  */
+  /* } */
 
   /* Show sidebar on active */
   #nav-links.active {

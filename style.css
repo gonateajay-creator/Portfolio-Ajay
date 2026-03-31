@@ -23,7 +23,9 @@ padding:80px 0;
 scroll-margin-top:100px;
 }
 
-.dark{background:#0b1220}
+.dark{
+background:#0b1220;
+}
 
 h2{
 text-align:center;
@@ -37,7 +39,7 @@ font-size:32px;
 position:fixed;
 width:100%;
 top:0;
-background:rgba(15,23,42,.7);
+background:rgba(15,23,42,0.6); /* 🔥 transparent */
 backdrop-filter:blur(10px);
 padding:18px 0;
 z-index:1000;
@@ -49,30 +51,28 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo span{color:#00f5ff}
-
-/* DESKTOP NAV */
-#nav-links{
-display:flex;
-gap:25px;
+.logo span{
+color:#00f5ff;
 }
 
-#nav-links a{
+nav a{
+margin-left:25px;
 color:#cbd5e1;
 text-decoration:none;
 transition:.3s;
 }
 
-#nav-links a:hover{
+nav a:hover{
 color:#00f5ff;
 }
 
-/* MENU ICON */
+/* HAMBURGER */
 .menu-toggle{
 display:none;
 font-size:28px;
 cursor:pointer;
 color:white;
+z-index:1100;
 }
 
 /* ================= HERO ================= */
@@ -91,14 +91,19 @@ align-items:center;
 gap:60px;
 }
 
-.hero-text h1{font-size:50px}
+.hero-text h1{
+font-size:50px;
+}
 
 .hero-text h3{
 color:#00f5ff;
 margin:15px 0;
 }
 
-.hero-text p{color:#cbd5e1}
+.hero-text p{
+color:#cbd5e1;
+margin-top:10px;
+}
 
 /* BUTTONS */
 
@@ -128,7 +133,10 @@ border:2px solid #00f5ff;
 color:#00f5ff;
 }
 
-.btn:hover{box-shadow:0 0 20px #00f5ff}
+.btn:hover{
+box-shadow:0 0 20px #00f5ff;
+}
+
 .btn-outline:hover{
 background:#00f5ff;
 color:black;
@@ -154,7 +162,6 @@ justify-content:center;
 
 .social-icons img{
 width:24px;
-height:24px;
 }
 
 /* IMAGE */
@@ -171,9 +178,15 @@ border:5px solid #00f5ff;
 .about-center{
 display:flex;
 gap:40px;
-flex-wrap:wrap;
 align-items:center;
 justify-content:center;
+flex-wrap:wrap;
+}
+
+.bg__img{
+width:250px;
+border-radius:50%;
+border:4px solid #00f5ff;
 }
 
 /* ================= SKILLS ================= */
@@ -182,12 +195,15 @@ justify-content:center;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+justify-items:center;
 }
 
 .skill-card{
 background:#1e293b;
 padding:20px;
 border-radius:12px;
+width:100%;
+max-width:250px;
 text-align:center;
 transition:.3s;
 }
@@ -195,6 +211,11 @@ transition:.3s;
 .skill-card:hover{
 transform:translateY(-8px);
 box-shadow:0 0 20px #00f5ff;
+}
+
+.skill-card img{
+width:60px;
+margin-bottom:10px;
 }
 
 /* ================= PROJECT ================= */
@@ -212,6 +233,13 @@ border-radius:12px;
 text-align:center;
 }
 
+.project-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
 /* ================= EDUCATION ================= */
 
 .education-grid{
@@ -224,6 +252,7 @@ gap:20px;
 background:#1e293b;
 padding:20px;
 border-radius:12px;
+text-align:center;
 }
 
 /* ================= FORM ================= */
@@ -250,65 +279,68 @@ footer{
 text-align:center;
 padding:20px;
 background:#0b1220;
-margin-top:40px;
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
 
-/* SHOW MENU ICON */
-.menu-toggle{
-display:block;
-}
-
-/* HIDE DESKTOP NAV */
-#nav-links{
-position:fixed;
-top:0;
-left:0;
-width:60%;
-height:100vh;
-
-background:rgba(15,23,42,0.7);
-backdrop-filter:blur(8px);
-
-flex-direction:column;
-padding-top:80px;
-
-transform:translateX(-100%);
-transition:0.4s ease;
-}
-
-/* OPEN MENU */
-#nav-links.active{
-transform:translateX(0);
-}
-
-/* LINKS */
-#nav-links a{
-margin:15px 20px;
-font-size:18px;
-}
-
-/* HERO FIX */
+/* HERO */
 .hero-grid{
 flex-direction:column-reverse;
 text-align:center;
 }
 
 .hero-img img{
-width:250px;
-height:250px;
+width:220px;
+height:220px;
 }
 
-.hero-text h1{font-size:28px}
-.hero-text h3{font-size:18px}
-.hero-text p{font-size:14px}
+.hero-text h1{font-size:28px;}
+.hero-text h3{font-size:18px;}
+.hero-text p{font-size:14px;}
 
-/* SECTION */
-section{
-padding:60px 15px;
+/* NAVBAR MOBILE */
+.menu-toggle{
+display:block;
+}
+
+#nav-links{
+position:fixed;
+top:0;
+left:0;
+width:60%; /* 🔥 perfect width */
+height:100vh;
+
+background:rgba(15,23,42,0.7); /* 🔥 transparent */
+backdrop-filter:blur(10px);
+
+display:flex;
+flex-direction:column;
+padding-top:80px;
+
+transform:translateX(-100%);
+transition:0.4s ease;
+z-index:1000;
+}
+
+#nav-links.active{
+transform:translateX(0);
+}
+
+#nav-links a{
+margin:15px 20px;
+font-size:18px;
+}
+
+/* OTHER */
+.about-center{
+flex-direction:column;
+text-align:center;
+}
+
+.skills-grid{
+grid-template-columns:1fr;
 }
 
 }
